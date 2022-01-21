@@ -8,7 +8,7 @@ class UI {
         this.collegeOfEdu = document.querySelector('#collegeOfEdu');
         this.h4 = document.querySelector('.h4');
         this.table = document.querySelector('table');
-        // this.result = document.querySelector('.result');
+        this.courseAddedBefore = false
     }
 
     nextStep(){
@@ -57,9 +57,11 @@ class UI {
         document.querySelectorAll('.courseCode').forEach(crs => {
             crs.addEventListener('blur', function(){
                 if(courseCodeArr.includes(crs.value.toLowerCase())){
-                    alert(`${crs.value} has been added before`)
+                    alert(`${crs.value} has been added before`);
+                    ui.courseAddedBefore = true;
                 } else {
-                    courseCodeArr.push(crs.value.toLowerCase())
+                    courseCodeArr.push(crs.value.toLowerCase());
+                    ui.courseAddedBefore = false;
                 }
             })
         })
@@ -83,7 +85,7 @@ class UI {
                 validCreditUnit.push(reCre.test(input.value));
             }
         })
-        if(!validGrade.includes(false) && !validCreditUnit.includes(false) && !InvalidCourse.includes(false)){
+        if(!validGrade.includes(false) && !validCreditUnit.includes(false) && !InvalidCourse.includes(false) && ui.courseAddedBefore === false){
             let allCreditUnits = 0;
             let studentScores = 0;
             let gp = 0
