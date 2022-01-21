@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main>
+        <div class="container">
+            <h2>Calculate your GPA</h2>
+            <form action="">
+                <div class="">
+                    <label for="institute">Choose your educational institution :</label>
+                    <select name="institute" id="institute">
+                        <option value="University" id="university">
+                            University
+                        </option>
+                        <option value="Polytechnic" id="polytechnic">
+                            Polytechnic
+                        </option>
+                        <option value="collegeOfEdu" id="collegeOfEdu">
+                            College of Education
+                        </option>
+                    </select>
+                </div>
+
+                <div class="">
+                    <label for="NoCourse">
+                        Choose the Number of Course offering:
+                        <input type="number" id="NoOfCourse">
+                    </label>
+                </div>
+
+                <input type="submit" value="Next" id="next">
+            </form>
+
+            <h4 class="h4"></h4>
+            <table>
+            </table>
+
+            <button class="calculate">
+                Calculate
+            </button>
+        </div>
+    </main>
+
+    <div class="result">
+       
+    </div>
+
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
