@@ -8,6 +8,7 @@ class UI {
         this.collegeOfEdu = document.querySelector('#collegeOfEdu');
         this.h4 = document.querySelector('.h4');
         this.table = document.querySelector('table');
+        // this.result = document.querySelector('.result');
     }
 
     nextStep(){
@@ -174,4 +175,10 @@ class UI {
             alert('please fill in correctly');
         }
     }
+}
+
+const sanitizeHTML = function(str){
+    let temp = document.createElement('div');
+    temp.textContent = str;
+    return temp.innerHTML;
 };
