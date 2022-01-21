@@ -59,9 +59,11 @@ class UI {
                 if(courseCodeArr.includes(crs.value.toLowerCase())){
                     alert(`${crs.value} has been added before`);
                     ui.courseAddedBefore = true;
+                    crs.style.border = '2px solid red';
                 } else {
                     courseCodeArr.push(crs.value.toLowerCase());
                     ui.courseAddedBefore = false;
+                    crs.style.border = '1px solid gray';
                 }
             })
         })
