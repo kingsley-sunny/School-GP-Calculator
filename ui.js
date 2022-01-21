@@ -75,7 +75,7 @@ class UI {
         let validGrade =[];
         let validCreditUnit =[];
         let InvalidCourse = [];
-        // let 
+        
         inputs.forEach(input => {
             if(input.value === ''){
                InvalidCourse.push(false);
@@ -85,7 +85,7 @@ class UI {
                 validCreditUnit.push(reCre.test(input.value));
             }
         })
-        if(!validGrade.includes(false) && !validCreditUnit.includes(false) && !InvalidCourse.includes(false) && ui.courseAddedBefore === false){
+        if(!validGrade.includes(false) && !validCreditUnit.includes(false) && !InvalidCourse.includes(false) && this.courseAddedBefore === false){
             let allCreditUnits = 0;
             let studentScores = 0;
             let gp = 0
